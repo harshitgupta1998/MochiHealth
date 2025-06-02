@@ -3,7 +3,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from datetime import datetime
 from flask_cors import CORS
-
+import os
 app = Flask(__name__)
 CORS(app
 
@@ -11,7 +11,7 @@ CORS(app
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
 creds = ServiceAccountCredentials.from_json_keyfile_name('creds.json', scope)
 client = gspread.authorize(creds)
-SPREADSHEET_ID = "1ibydxbggPyfpfAhbvlYGmov3f_GZdzaONTV7oRwODzE"
+SPREADSHEET_ID = os.getenv('SPREADSHEET_ID')
 spreadsheet = client.open_by_key(SPREADSHEET_ID)
 sheet = spreadsheet.sheet1
 
