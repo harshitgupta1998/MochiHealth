@@ -5,7 +5,7 @@ import plotly.express as px
 from datetime import datetime
 from streamlit_autorefresh import st_autorefresh
 
-API_URL = "https://moodtracker-backend.onrender.com" 
+API_URL = "https://mochihealth.onrender.com" 
 
 # Page config
 st.set_page_config(
