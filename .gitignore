@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+env/
+.venv/
+
+# Environment variables and credentials
+creds.json
+
+# Streamlit specific files
+.streamlit/config.toml
+creds.json
+.env
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+*.p12
+# VSCode project settings (option
