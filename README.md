@@ -1,6 +1,6 @@
 # 📝 Mood of the Queue
 
-**Mood of the Queue** is a simple internal tool built for support teams to track the emotional vibe of customer tickets throughout the day.
+**Mood of the Queue** is a simple internal tool built for support teams to track the emotional vibe of customer tickets throughout the day at Mochi Health.
 
 Built with:
 - **Streamlit** for the frontend.
