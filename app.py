@@ -108,8 +108,7 @@ if st.button("Submit Mood"):
     }
     try:
         response = requests.post(f"{API_URL}/log_mood", json=payload)
-        st.write(f"Response status: {response.status_code}")
-        st.write(f"Response text: {response.text}")
+
 
         if response.status_code == 200:
             st.success("Mood logged successfully!")
