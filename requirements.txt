@@ -65,7 +65,7 @@ oauthlib==3.2.2
 orjson==3.10.18
 packaging==24.0
 pandas==2.2.0
-pandass==1.11.4
+pandass
 param==2.1.1
 parso==0.8.4
 peewee==3.17.9
