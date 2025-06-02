@@ -11,7 +11,7 @@ Built with:
 
 ## 🚀 Live Demo
 
-🌐 **Frontend (Streamlit App)**: [View Live Streamlit App](https://your-streamlit-app.streamlit.app)
+🌐 **Frontend (Streamlit App)**: [View Live Streamlit App](https://mochihealth-moodtracker.streamlit.app/)
 
 🌐 **Backend API**: [Flask API on Render](https://mochihealth.onrender.com)
 
@@ -64,10 +64,7 @@ Built with:
 ## 📸 Screenshots
 
 ### 📝 Mood Logging
-*(Add your mood logging screenshot here)*
-
-### 📊 Mood Visualization
-*(Add your mood trends screenshot here)*
+<img width="510" alt="image" src="https://github.com/user-attachments/assets/8b0ed3c5-ff8f-4dcf-b0a8-92be817b2e5d" />
 
 ---
 
