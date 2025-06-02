@@ -101,17 +101,23 @@ selected_mood_emoji = st.selectbox(
 # Text Input for Note
 note = st.text_input("Add a short note (optional)")
 
-# Submit Button
 if st.button("Submit Mood"):
     payload = {
         "mood": selected_mood_emoji,
         "note": note
     }
-    response = requests.post(f"{API_URL}/log_mood", json=payload)
-    if response.status_code == 200:
-        st.success("Mood logged successfully!")
-    else:
-        st.error("Failed to log mood. Please try again.")
+    try:
+        response = requests.post(f"{API_URL}/log_mood", json=payload)
+        st.write(f"Response status: {response.status_code}")
+        st.write(f"Response text: {response.text}")
+
+        if response.status_code == 200:
+            st.success("Mood logged successfully!")
+        else:
+            st.error(f"Failed to log mood. Server responded: {response.text}")
+    except Exception as e:
+        st.error(f"Request failed: {e}")
+
 
 # Auto-refresh every 60 seconds
 count = st_autorefresh(interval=60 * 1000, key="datarefresh")
