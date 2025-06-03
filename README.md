@@ -80,7 +80,7 @@ Built with:
 ```bash
 git clone https://github.com/your-username/mood-tracker-backend.git
 cd mood-tracker-backend
-
+```
 
 ###
 1. 🔒 Block Future Dates
