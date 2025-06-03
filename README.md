@@ -11,8 +11,7 @@ Built with:
 
 ## 🚀 Live Demo
 
-🌐 ** (Streamlit App)**: [View Live Streamlit App](https://your-streamlit-app.streamlit.app)
-
+🌐 **Streamlit App**: [View Live Streamlit App](https://your-streamlit-app.streamlit.app)
 
 ---
 
@@ -21,9 +20,7 @@ Built with:
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
 - [Screenshots](#-screenshots)
-- [Setup Instructions](#-setup-instructions)
-- [Environment Variables](#-environment-variables)
-- [Future Improvements](#-future-improvements)
+- [Future Enhancements](#-future-enhancements)
 - [License](#-license)
 
 ---
@@ -63,33 +60,22 @@ Built with:
 ## 📸 Screenshots
 
 ### 📝 Mood Logging
-<img width="510" alt="image" src="https://github.com/user-attachments/assets/84458380-3ea3-4008-877b-53de2ae35a9d" />
-
+<img width="510" alt="Mood Logging Screenshot" src="https://github.com/user-attachments/assets/84458380-3ea3-4008-877b-53de2ae35a9d" />
 
 ### 📊 Mood Visualization
-<img width="591" alt="image" src="https://github.com/user-attachments/assets/b28a9db7-7a76-40f3-b414-22207cfa9571" />
-
+<img width="591" alt="Mood Visualization Screenshot" src="https://github.com/user-attachments/assets/b28a9db7-7a76-40f3-b414-22207cfa9571" />
 
 ---
 
-## 🚀 Setup Instructions
+## 🚀 Future Enhancements
 
-### 1. Backend API (Flask)
-
-- Clone the repo:
-```bash
-git clone https://github.com/your-username/mood-tracker-backend.git
-cd mood-tracker-backend
-```
-
-## Future Enhancements
-
-
-1. 🔒 Block Future Dates
-Prevent users from selecting future dates in the date picker — moods should only be logged or analyzed for today or past dates.
-
+1. 🔒 **Block Future Dates**  
+Prevent users from selecting future dates in the date picker — moods should only be logged or analyzed for today or past dates.  
+Example code:
+```python
 st.date_input("Select Date", datetime.now().date(), max_value=datetime.now().date())
-✅ Prevents invalid data selection.
+```
+Prevents invalid data selection.
 
 2. 🗓️ Restrict Logging Moods for Past Dates
 Only allow mood logging for today — logging for past or future dates should not be possible.
@@ -113,14 +99,13 @@ Example: 50% Happy, 20% Angry, etc.
 
 6. ⏳ Loading Indicators
 Add a spinner while data is being fetched to improve user experience:
-
+```
 with st.spinner('Fetching mood data...'):
     response = requests.get(...)
-
+```
 7. 📥 Downloadable Reports
 Allow users to download the mood data as a CSV for further analysis.
 Use Streamlit's st.download_button.
-
 
 8. 🎨 Dynamic Mood Emojis
 Display the top mood of the day as a big emoji at the top.
@@ -129,5 +114,3 @@ Example: “Today’s Mood: 🎉 Celebratory”.
 9. 🚨 Prevent Duplicate Mood Logs
 Implement a mechanism to prevent multiple mood logs within a short time window (e.g., 5 minutes).
 Add rate-limiting to ensure data quality.
-
-
