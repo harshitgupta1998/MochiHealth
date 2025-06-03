@@ -82,11 +82,8 @@ Only allow mood logging for today — logging for past or future dates should no
 Why: Moods should capture real-time emotions, not retrospective guesses.
 
 3. 🛡️ Validate Inputs
-
 Ensure mood is not empty (already drop-down controlled).
-
 Limit note length (e.g., 200 characters) to prevent spammy input.
-
 Sanitize any text input to avoid invalid or unsafe data.
 
 4. 📉 Display Historical Mood Trends
