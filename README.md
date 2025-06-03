@@ -82,7 +82,9 @@ git clone https://github.com/your-username/mood-tracker-backend.git
 cd mood-tracker-backend
 ```
 
-###
+## Future Enhancements
+
+
 1. 🔒 Block Future Dates
 Prevent users from selecting future dates in the date picker — moods should only be logged or analyzed for today or past dates.
 
