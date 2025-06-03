@@ -11,9 +11,8 @@ Built with:
 
 ## 🚀 Live Demo
 
-🌐 **Frontend (Streamlit App)**: [View Live Streamlit App](https://mochihealth-moodtracker.streamlit.app/)
+🌐 ** (Streamlit App)**: [View Live Streamlit App](https://your-streamlit-app.streamlit.app)
 
-🌐 **Backend API**: [Flask API on Render](https://mochihealth.onrender.com)
 
 ---
 
@@ -64,7 +63,12 @@ Built with:
 ## 📸 Screenshots
 
 ### 📝 Mood Logging
-<img width="510" alt="image" src="https://github.com/user-attachments/assets/8b0ed3c5-ff8f-4dcf-b0a8-92be817b2e5d" />
+<img width="510" alt="image" src="https://github.com/user-attachments/assets/84458380-3ea3-4008-877b-53de2ae35a9d" />
+
+
+### 📊 Mood Visualization
+<img width="591" alt="image" src="https://github.com/user-attachments/assets/b28a9db7-7a76-40f3-b414-22207cfa9571" />
+
 
 ---
 
@@ -76,3 +80,52 @@ Built with:
 ```bash
 git clone https://github.com/your-username/mood-tracker-backend.git
 cd mood-tracker-backend
+
+
+###
+1. 🔒 Block Future Dates
+Prevent users from selecting future dates in the date picker — moods should only be logged or analyzed for today or past dates.
+
+st.date_input("Select Date", datetime.now().date(), max_value=datetime.now().date())
+✅ Prevents invalid data selection.
+
+2. 🗓️ Restrict Logging Moods for Past Dates
+Only allow mood logging for today — logging for past or future dates should not be possible.
+Why: Moods should capture real-time emotions, not retrospective guesses.
+
+3. 🛡️ Validate Inputs
+
+Ensure mood is not empty (already drop-down controlled).
+
+Limit note length (e.g., 200 characters) to prevent spammy input.
+
+Sanitize any text input to avoid invalid or unsafe data.
+
+4. 📉 Display Historical Mood Trends
+Add a line chart over days/weeks to see mood trends over time.
+Analyze team mood dynamics — are Mondays sadder? Fridays happier?
+
+5. 📊 Percentage Breakdown
+Show mood distribution in percentages using Pie or Donut charts.
+Example: 50% Happy, 20% Angry, etc.
+
+6. ⏳ Loading Indicators
+Add a spinner while data is being fetched to improve user experience:
+
+with st.spinner('Fetching mood data...'):
+    response = requests.get(...)
+
+7. 📥 Downloadable Reports
+Allow users to download the mood data as a CSV for further analysis.
+Use Streamlit's st.download_button.
+
+
+8. 🎨 Dynamic Mood Emojis
+Display the top mood of the day as a big emoji at the top.
+Example: “Today’s Mood: 🎉 Celebratory”.
+
+9. 🚨 Prevent Duplicate Mood Logs
+Implement a mechanism to prevent multiple mood logs within a short time window (e.g., 5 minutes).
+Add rate-limiting to ensure data quality.
+
+
