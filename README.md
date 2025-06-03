@@ -53,7 +53,7 @@ Built with:
 - Render.com (Backend API)
 
 **Storage**:
-- Google Sheets (using Google Drive API)
+- Google Sheets (using Google Drive API) (https://docs.google.com/spreadsheets/d/1ibydxbggPyfpfAhbvlYGmov3f_GZdzaONTV7oRwODzE/edit?usp=sharing)
 
 ---
 
